@@ -1,0 +1,30 @@
+app:
+  version: 0.0.1-SNAPSHOT
+
+server:
+  servlet:
+    context-path: '/api'
+  port: 8080
+
+url:
+  beneficiario: 'http://localhost:8081'
+  caixa-eletronico: 'http://localhost:8082'
+
+spring:
+  cloud:
+    gateway:
+      globalcors:
+        corsConfigurations:
+          '[/**]':
+            allowedOrigins: "http://localhost:4200"
+            allowedHeaders:
+              - content-type
+              - x-requested-with
+              - Authorization
+            allowCredentials: true
+            allowedMethods:
+              - GET
+              - POST
+              - OPTIONS
+              - DELETE
+              - PUT
