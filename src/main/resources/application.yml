@@ -7,8 +7,8 @@ server:
   port: 8080
 
 url:
-  beneficiario: 'http://localhost:8081'
-  caixa-eletronico: 'http://localhost:8082'
+  beneficiario: 'https://aposentadoria-beneficiario-api.herokuapp.com'
+  caixa-eletronico: 'https://aposentadoria-caixa-api.herokuapp.com'
 
 spring:
   cloud:
@@ -16,7 +16,7 @@ spring:
       globalcors:
         corsConfigurations:
           '[/**]':
-            allowedOrigins: "http://localhost:4200"
+            allowedOrigins: "https://aposentadoria-app.herokuapp.com"
             allowedHeaders:
               - content-type
               - x-requested-with
