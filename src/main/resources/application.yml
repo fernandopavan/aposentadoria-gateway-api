@@ -16,7 +16,9 @@ spring:
       globalcors:
         corsConfigurations:
           '[/**]':
-            allowedOrigins: "https://aposentadoria-app.herokuapp.com"
+            allowedOrigins: 
+              - "https://aposentadoria-app.herokuapp.com"
+              - "http://aposentadoria-app.herokuapp.com"
             allowedHeaders:
               - content-type
               - x-requested-with
